@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "user1",
+      "description": "Avatar for Elena Ortiz",
+      "imageUrl": "https://picsum.photos/seed/user1/36/36",
+      "imageHint": "woman face"
+    },
+    {
+      "id": "user2",
+      "description": "Avatar for Carlos Ruiz",
+      "imageUrl": "https://picsum.photos/seed/user2/36/36",
+      "imageHint": "man face"
+    },
+    {
+      "id": "user3",
+      "description": "Avatar for Ana Torres",
+      "imageUrl": "https://picsum.photos/seed/user3/36/36",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user4",
+      "description": "Avatar for Javier Peña",
+      "imageUrl": "https://picsum.photos/seed/user4/36/36",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user5",
+      "description": "Avatar for Sofía Reyes",
+      "imageUrl": "https://picsum.photos/seed/user5/36/36",
+      "imageHint": "person smiling"
+    },
+    {
+        "id": "head-of-dept",
+        "description": "Avatar for Jefatura de Docencia",
+        "imageUrl": "https://picsum.photos/seed/head-of-dept/40/40",
+        "imageHint": "person professional"
+    }
+  ]
+}
