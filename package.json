@@ -8,10 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typeorm": "typeorm-ts-node-esm",
-    "migration:generate": "npm run typeorm migration:generate -- -d src/backend/database/data-source.ts",
-    "migration:run": "npm run typeorm migration:run -- -d src/backend/database/data-source.ts",
-    "migration:revert": "npm run typeorm migration:revert -- -d src/backend/database/data-source.ts"
+    "typeorm": "ts-node",
+    "migration:generate": "npm run typeorm -- -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -d src/backend/database/data-source.ts",
+    "migration:run": "npm run typeorm -- -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d src/backend/database/data-source.ts",
+    "migration:revert": "npm run typeorm -- -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:revert -d src/backend/database/data-source.ts"
   },
   "dependencies": {
     "@genkit-ai/google-genai": "^1.20.0",
@@ -54,7 +54,6 @@
     "reflect-metadata": "^0.2.2",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
-    "ts-node-esm": "^0.0.2",
     "typeorm": "^0.3.27",
     "typeorm-ts-node-esm": "^0.3.20",
     "zod": "^3.24.2"
@@ -67,17 +66,12 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
   },
   "typeorm": {
-    "entities": [
-      "src/backend/database/entities/**/*.ts"
-    ],
-    "migrations": [
-      "src/backend/database/migrations/**/*.ts"
-    ],
-    "subscribers": [
-      "src/backend/database/subscribers/**/*.ts"
-    ]
+    "entities": ["src/backend/database/entities/**/*.ts"],
+    "migrations": ["src/backend/database/migrations/**/*.ts"],
+    "subscribers": ["src/backend/database/subscribers/**/*.ts"]
   }
 }
